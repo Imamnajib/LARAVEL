@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class AuthorController extends Controller
 {
     public function index(){
-        $data = new Author;
-        $Authors = $data->getAuthor();
+        $authors =  Author::all();
+       
 
-        return view ('Author' , ['Authors' => $Authors]);
+        return view ('Author' , ['Authors' => $authors]);
 
     }
 }
