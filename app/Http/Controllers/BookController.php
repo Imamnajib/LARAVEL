@@ -9,6 +9,10 @@ class BookController extends Controller
 {
     public function index (){
         $books =  Book::all();
-    return view( 'Book',['Books' => $books]);
+    return response() -> json([
+        'succes' => true,
+        'Messages' => 'Get All Resources',
+        'data' => $books,
+    ]  ,200);
     }
 }
