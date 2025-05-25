@@ -16,6 +16,11 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('buku');
+            $table->integer('stock');
+            $table->integer('price');
+            $table->string('cover_poto');
+            $table-> unsignedBigInteger('genre_id');
+            $table->  unsignedBigInteger('author_id');
         });
     }
 

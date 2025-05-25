@@ -15,18 +15,33 @@ class GenreSeeder extends Seeder
     {
         Genre::create([
             'name' => 'horor',
-            'description' => 'teman tidak mau bayar hutang hahahaha'
+            'description' => 'teman tidak mau bayar hutang hahahaha',
+            'stock' => 81,
+            'price' => 40000,
+            'cover_poto' => 'Bintang.jpg',
+            'genre_id' => 5,
+            'author_id' => 5,
         ]);
 
          Genre::create([
             'name' => 'action',
-            'description' => 'berani melampaui limit diri '
+            'description' => 'berani melampaui limit diri ',
+            'stock' => 81,
+            'price' => 40000,
+            'cover_poto' => 'Bintang.jpg',
+            'genre_id' => 5,
+            'author_id' => 5,
         ]);
 
 
          Genre::create([
             'name' => 'Romantis',
-            'description' => 'Separuh hati'
+            'description' => 'Separuh hati',
+            'stock' => 81,
+            'price' => 40000,
+            'cover_poto' => 'Bintang.jpg',
+            'genre_id' => 5,
+            'author_id' => 5,
         ]);
     }
 }

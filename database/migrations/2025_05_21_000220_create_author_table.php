@@ -15,6 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('komik');
+            $table->integer('stock');
+            $table->integer('price');
+            $table->string('cover_poto');
+            $table-> unsignedBigInteger('genre_id');
+            $table->  unsignedBigInteger('author_id')->nullable();
+
+
             $table->timestamps();
       
         });

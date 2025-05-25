@@ -15,7 +15,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
+            $table->integer('stock');
+            $table->integer('price');
+            $table->string('cover_poto');
+            $table-> unsignedBigInteger('genre_id')->nullable();
+            $table->  unsignedBigInteger('author_id');
+
         });
     }
 
