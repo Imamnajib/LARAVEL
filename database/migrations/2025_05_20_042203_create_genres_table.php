@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('stock');
             $table->integer('price');
             $table->string('cover_poto');
-            $table-> unsignedBigInteger('genre_id')->nullable();
-            $table->  unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('genre_id')->nullable();
+            $table->unsignedBigInteger('author_id');
 
         });
     }
