@@ -15,19 +15,14 @@ class DatabaseSeeder extends Seeder
         $this -> call([
 
             GenreSeeder::class,
+            AuthorSeeder::class,
+            BookSeeder::class,
+            UserSeeder::class,
         ]);
 
-        $this -> call( [
-
-            BookSeeder::class
-        ]);
-
-          $this -> call( [
-
-            AuthorSeeder::class
-        ]);
         
-     }
+        
+    }
 }
 
 
