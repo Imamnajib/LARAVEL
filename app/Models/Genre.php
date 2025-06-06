@@ -6,17 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model
 {
-    private $Genres = 
-        [
-            'fiction' => 'fiction',
-            'Non-Fiction' => 'Non-fiction',
-            'Science Fiction' => 'Science Fiction',
-            'Romance' => 'Romance',
-            'Biography' => 'Bioghrapy'
-        ];
+ 
+    protected $table = 'genres' ; 
 
-        public function getGenre() {
-            return $this->Genres ;
-        }
+    protected $fillable = [
+        'name' ,  'description ' , 'stock' , 'price' , 'cover_poto' , 'genre_id' , 'author_id'
+    ];
 
 }

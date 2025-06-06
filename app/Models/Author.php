@@ -6,17 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    private $Authors = 
-        [
-            'George Orwell' => 'George Orwell',
-            'Jane Austen' => 'Jane Austen',
-            'Haruki Murakami' => 'Haruki Murakami',
-            'Michelle Obama' => 'Michelle Obama',
-            'Stephen Hawking' => 'Stephen Hawking'
+   protected $table = 'authors';
 
-        ];
-        
-        public function getAuthor() {
-            return $this->Authors;
-        }
+       protected $fillable = [
+        'name' , 'komik' , 'stock' , 'price' , 'cover_poto' , 'genre_id' , 'author_id'
+    ];
 }

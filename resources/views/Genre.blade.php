@@ -8,12 +8,13 @@
 </head>
 <body>
     <h1>Halloo</h1>
-    <p>Ini adalah kupulan Genre buku</p>
+    <p>Ini adalah kumpulan Genre buku</p>
   
-@foreach ($Genres as $item)
+@foreach ($genres as $genre)
     <ul>
-        <li>{{ $item }}</li>
-    </ul>    
+        <li>{{ $genre ['name']  }}</li>
+        <li>{{ $genre ['description'] }}</li>
+    </ul>
 @endforeach
 
 
