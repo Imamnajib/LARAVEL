@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\TransactionController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,14 +23,18 @@ Route::post('/logout',[AuthController::class,'logout'])->middleware('auth:api');
 
 //Route api untuk login 
 
+
 Route::apiResource('/Book' , BookController::class)->only(['index' ,'show']);
 
+            //CUSTOMER
 Route::middleware(['auth:api'])->group(function(){
     Route::get('/Genre' , [GenreController::class,'index']);
+    Route::apiResource('/Transaction' , TransactionController::class)->only('index' , 'store' , 'show');
 
-
+            //ADMIN
     Route::middleware(['role:admin'])->group(function(){
     Route::apiResource('/Book' , BookController::class)->only(['store' , 'update' , 'destroy' ]);
+    Route::apiResource('/Transaction' , TransactionController::class)->only('update' , 'destroy');
     });
 
 });
